@@ -328,11 +328,13 @@ Hold V to look around | R to Restart
         self.accept("space-up", self.startGame)
 
     def startGame(self):
-        #self.nextState("RacetrackSelection")
+        self.nextState("RacetrackSelection")
         #jesnk
-        self.nextState("game")
+        #self.selectTrack("maze.track")
+        #self.nextState("game")
     def changeLevel(self, level):
         Game.level = level.lower()
+
 
 class RacetrackSelection(Game):
     def __init__(self):
@@ -648,6 +650,7 @@ class RacingGame(Game):
 
         # Load the various models
         self.loadModels()
+        # jesnk minimap
         self.loadMinimap()
 
         # Load lights and the fancy background
